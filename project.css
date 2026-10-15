@@ -1,0 +1,3972 @@
+/* =========================================
+   BASIC RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+
+    overflow-x: hidden;
+
+    font-family: 'Poppins', Arial, sans-serif;
+}
+
+
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+.head {
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 80px;
+
+    padding: 0 6%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    z-index: 1000;
+
+    background: transparent;
+
+
+    /*
+       Navbar stays transparent
+       during the first 100vh.
+    */
+
+    animation-name: navbarScroll;
+
+    animation-duration: 1ms;
+
+    animation-timing-function: linear;
+
+    animation-fill-mode: both;
+
+    animation-timeline: scroll(root);
+
+    animation-range: 0 100vh;
+}
+
+
+
+/* =========================================
+   NAVBAR BACKGROUND
+========================================= */
+
+@keyframes navbarScroll {
+
+    0% {
+
+        background: transparent;
+
+        box-shadow: none;
+    }
+
+
+    99.9% {
+
+        background: transparent;
+
+        box-shadow: none;
+    }
+
+
+    100% {
+
+        background: white;
+
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    }
+
+}
+
+
+
+/* =========================================
+   LOGO
+========================================= */
+
+.logo {
+
+    position: relative;
+
+    z-index: 1002;
+}
+
+
+.logo span {
+
+    color: white;
+
+    font-family: 'Great Vibes', cursive;
+
+    font-size: 38px;
+
+    font-weight: bold;
+
+
+    animation-name: logoColor;
+
+    animation-duration: 1ms;
+
+    animation-timing-function: linear;
+
+    animation-fill-mode: both;
+
+    animation-timeline: scroll(root);
+
+    animation-range: 0 100vh;
+}
+
+
+
+/* =========================================
+   LOGO COLOR
+========================================= */
+
+@keyframes logoColor {
+
+    0% {
+
+        color: white;
+    }
+
+
+    99.9% {
+
+        color: white;
+    }
+
+
+    100% {
+
+        color: #555;
+    }
+
+}
+
+
+
+/* =========================================
+   DESKTOP NAVIGATION
+========================================= */
+
+.nav {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+}
+
+
+.nav a {
+
+    text-decoration: none;
+
+    color: white;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+
+    animation-name: navColor;
+
+    animation-duration: 1ms;
+
+    animation-timing-function: linear;
+
+    animation-fill-mode: both;
+
+    animation-timeline: scroll(root);
+
+    animation-range: 0 100vh;
+}
+
+
+.nav a:hover {
+
+    opacity: 0.6;
+}
+
+
+.nav .icon {
+
+    font-size: 15px;
+}
+
+
+
+/* =========================================
+   NAVIGATION COLOR
+========================================= */
+
+@keyframes navColor {
+
+    0% {
+
+        color: white;
+    }
+
+
+    99.9% {
+
+        color: white;
+    }
+
+
+    100% {
+
+        color: #666;
+    }
+
+}
+
+
+
+/* =========================================
+   HERO SECTION
+========================================= */
+
+.hero {
+
+    position: relative;
+
+    width: 100%;
+
+    height: 100vh;
+
+    overflow: hidden;
+}
+
+
+
+/* =========================================
+   HERO IMAGE
+========================================= */
+
+.heroImg {
+
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+
+    height: 100%;
+}
+
+
+.heroImg img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center;
+}
+
+
+
+/* =========================================
+   DARK OVERLAY
+========================================= */
+
+.dark {
+
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    background: rgba(15, 25, 30, 0.48);
+}
+
+
+
+/* =========================================
+   HERO CONTENT
+========================================= */
+
+.heroText {
+
+    position: absolute;
+
+    top: 50%;
+
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    width: 100%;
+
+    text-align: center;
+
+    color: white;
+
+    overflow: hidden;
+}
+
+
+
+/* =========================================
+   PREMIUM
+========================================= */
+
+.heroText h1 {
+
+    margin: 0;
+
+    color: #ffff00;
+
+    font-family: 'Great Vibes', cursive;
+
+    font-size: 58px;
+
+    font-weight: normal;
+
+    animation: premiumInside 1.3s ease-out forwards;
+}
+
+
+@keyframes premiumInside {
+
+    0% {
+
+        opacity: 0;
+
+        transform: scale(0.1);
+    }
+
+
+    60% {
+
+        opacity: 1;
+
+        transform: scale(1.15);
+    }
+
+
+    100% {
+
+        opacity: 1;
+
+        transform: scale(1);
+    }
+
+}
+
+
+
+/* =========================================
+   QUALITY
+========================================= */
+
+.heroText h3 {
+
+    margin-top: 5px;
+
+    font-size: 10px;
+
+    letter-spacing: 6px;
+
+    font-weight: bold;
+
+    animation: qualityInside 1.3s ease-out forwards;
+}
+
+
+@keyframes qualityInside {
+
+    0% {
+
+        opacity: 0;
+
+        transform: scale(0.1);
+    }
+
+
+    60% {
+
+        opacity: 1;
+
+        transform: scale(1.2);
+    }
+
+
+    100% {
+
+        opacity: 1;
+
+        transform: scale(1);
+    }
+
+}
+
+
+
+/* =========================================
+   RESTAURANT + DISHES
+========================================= */
+
+.small {
+
+    margin-top: 8px;
+
+    overflow: hidden;
+}
+
+
+
+/* =========================================
+   RESTAURANT
+   LEFT → CENTER
+========================================= */
+
+.restaurant {
+
+    display: block;
+
+    font-family: 'Playfair Display', Georgia, serif;
+
+    font-size: 75px;
+
+    font-weight: bold;
+
+    font-style: italic;
+
+    line-height: 0.95;
+
+    animation: restaurantFromLeft 1.5s ease-out forwards;
+}
+
+
+@keyframes restaurantFromLeft {
+
+    0% {
+
+        opacity: 0;
+
+        transform: translateX(-100%);
+    }
+
+
+    100% {
+
+        opacity: 1;
+
+        transform: translateX(0);
+    }
+
+}
+
+
+
+/* =========================================
+   DISHES
+   RIGHT → CENTER
+========================================= */
+
+.dishes {
+
+    display: block;
+
+    font-family: 'Playfair Display', Georgia, serif;
+
+    font-size: 75px;
+
+    font-weight: bold;
+
+    font-style: italic;
+
+    line-height: 0.95;
+
+    animation: dishesFromRight 1.5s ease-out forwards;
+}
+
+
+@keyframes dishesFromRight {
+
+    0% {
+
+        opacity: 0;
+
+        transform: translateX(100%);
+    }
+
+
+    100% {
+
+        opacity: 1;
+
+        transform: translateX(0);
+    }
+
+}
+
+
+
+/* =========================================
+   SCROLL INDICATOR
+========================================= */
+
+.scrollDown {
+
+    position: absolute;
+
+    bottom: 35px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 23px;
+
+    height: 38px;
+
+    border: 2px solid white;
+
+    border-radius: 20px;
+}
+
+
+.scrollDown span {
+
+    position: absolute;
+
+    top: 7px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 4px;
+
+    height: 7px;
+
+    background: white;
+
+    border-radius: 50%;
+
+    animation: scrollDot 1.5s infinite;
+}
+
+
+@keyframes scrollDot {
+
+    0% {
+
+        opacity: 0;
+
+        transform: translate(-50%, 0);
+    }
+
+
+    50% {
+
+        opacity: 1;
+    }
+
+
+    100% {
+
+        opacity: 0;
+
+        transform: translate(-50%, 12px);
+    }
+
+}
+
+
+
+/* =========================================
+   MOBILE CHECKBOX
+========================================= */
+
+#menuToggle {
+
+    display: none;
+}
+
+
+
+/* =========================================
+   MOBILE HAMBURGER
+========================================= */
+
+.menuBtn {
+
+    display: none;
+
+    width: 30px;
+
+    cursor: pointer;
+
+    position: relative;
+
+    z-index: 1002;
+}
+
+
+.menuBtn span {
+
+    display: block;
+
+    width: 28px;
+
+    height: 2px;
+
+    margin: 6px 0;
+
+    background: white;
+
+    transition: 0.3s;
+
+
+    animation-name: hamburgerColor;
+
+    animation-duration: 1ms;
+
+    animation-timing-function: linear;
+
+    animation-fill-mode: both;
+
+    animation-timeline: scroll(root);
+
+    animation-range: 0 100vh;
+}
+
+
+
+/* =========================================
+   HAMBURGER COLOR
+========================================= */
+
+@keyframes hamburgerColor {
+
+    0% {
+
+        background: white;
+    }
+
+
+    99.9% {
+
+        background: white;
+    }
+
+
+    100% {
+
+        background: #555;
+    }
+
+}
+
+
+
+/* =========================================
+   MOBILE MENU
+========================================= */
+
+.mobileMenu {
+
+    display: none;
+
+    position: absolute;
+
+    top: 80px;
+
+    left: 0;
+
+    width: 100%;
+
+    background: white;
+
+    padding: 25px 30px;
+
+    flex-direction: column;
+
+    gap: 20px;
+}
+
+
+.mobileMenu a {
+
+    text-decoration: none;
+
+    color: #555;
+
+    font-size: 15px;
+
+    font-weight: 600;
+}
+
+
+
+/* =========================================
+   OPEN MOBILE MENU
+========================================= */
+
+#menuToggle:checked ~ .mobileMenu {
+
+    display: flex;
+}
+
+
+
+/* =========================================
+   HAMBURGER → X
+========================================= */
+
+#menuToggle:checked + .menuBtn span:nth-child(1) {
+
+    transform: translateY(8px) rotate(45deg);
+}
+
+
+#menuToggle:checked + .menuBtn span:nth-child(2) {
+
+    opacity: 0;
+}
+
+
+#menuToggle:checked + .menuBtn span:nth-child(3) {
+
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+
+
+/* =========================================
+   SECOND SECTION
+========================================= */
+
+/* .dummy {
+
+    width: 100%;
+
+    height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #f5f5f5;
+}
+
+
+.dummy h2 {
+
+    color: #555;
+
+    font-size: 40px;
+} */
+
+
+
+/* =========================================
+   THIRD SECTION
+========================================= */
+
+/* .third-section {
+
+    width: 100%;
+
+    height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: white;
+}
+
+
+.third-section h2 {
+
+    color: #555;
+
+    font-size: 40px;
+} */
+
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+
+    /* HEADER */
+
+    .head {
+
+        height: 75px;
+
+        padding: 0 30px;
+    }
+
+
+    /* LOGO */
+
+    .logo span {
+
+        font-size: 35px;
+    }
+
+
+    /* DESKTOP NAVIGATION HIDDEN */
+
+    .nav {
+
+        display: none;
+    }
+
+
+    /* HAMBURGER */
+
+    .menuBtn {
+
+        display: block;
+    }
+
+
+    /* MOBILE MENU */
+
+    .mobileMenu {
+
+        top: 75px;
+    }
+
+
+    /* HERO CONTENT */
+
+    .heroText {
+
+        width: 100%;
+    }
+
+
+    /* PREMIUM */
+
+    .heroText h1 {
+
+        font-size: 45px;
+    }
+
+
+    /* QUALITY */
+
+    .heroText h3 {
+
+        font-size: 9px;
+
+        letter-spacing: 5px;
+    }
+
+
+    /* RESTAURANT + DISHES */
+
+    .restaurant,
+    .dishes {
+
+        font-size: 48px;
+    }
+
+
+    /* IMAGE */
+
+    .heroImg img {
+
+        object-position: center center;
+    }
+
+}
+/* =========================================
+   OFFER SECTION
+========================================= */
+
+/* =========================
+   OFFER SECTION
+========================= */
+
+.offer{
+    width:100%;
+    min-height:100vh;
+    padding:100px 8%;
+    background:#fff;
+    overflow:hidden;
+
+    /* Scroll animation timeline */
+    view-timeline-name:--offer-section;
+    view-timeline-axis:block;
+}
+
+
+/* =========================
+   OFFER TITLE
+========================= */
+
+.title{
+    text-align:center;
+    margin-bottom:70px;
+}
+
+.title h2{
+    font-family:'Playfair Display',serif;
+    font-size:42px;
+    font-weight:500;
+    color:#333;
+    margin-bottom:8px;
+}
+
+.title p{
+    font-family:'Great Vibes',cursive;
+    font-size:30px;
+    color:#d4af37;
+}
+
+
+/* =========================
+   CARDS CONTAINER
+========================= */
+
+.cards{
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:60px;
+}
+
+
+/* =========================
+   COMMON CARD
+========================= */
+
+.card{
+    width:33.33%;
+    text-align:center;
+
+    opacity:0;
+
+    animation-duration:1.2s;
+    animation-timing-function:ease-out;
+    animation-fill-mode:both;
+
+    animation-timeline:--offer-section;
+    animation-range:entry 0% cover 45%;
+}
+
+
+/* =========================
+   LEFT CARD
+   Comes from RIGHT
+========================= */
+
+.card:nth-child(1){
+    animation-name:leftCard;
+}
+
+@keyframes leftCard{
+
+    0%{
+        opacity:0;
+        transform:translateX(300px);
+    }
+
+    100%{
+        opacity:1;
+        transform:translateX(0);
+    }
+
+}
+
+
+/* =========================
+   MIDDLE CARD
+   Comes from BOTTOM
+========================= */
+
+.card:nth-child(2){
+    animation-name:middleCard;
+}
+
+@keyframes middleCard{
+
+    0%{
+        opacity:0;
+        transform:translateY(300px);
+    }
+
+    100%{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+
+/* =========================
+   RIGHT CARD
+   Comes from LEFT
+========================= */
+
+.card:nth-child(3){
+    animation-name:rightCard;
+}
+
+@keyframes rightCard{
+
+    0%{
+        opacity:0;
+        transform:translateX(-300px);
+    }
+
+    100%{
+        opacity:1;
+        transform:translateX(0);
+    }
+
+}
+
+
+/* =========================
+   ROUND IMAGE
+========================= */
+
+.round{
+    width:170px;
+    height:170px;
+    margin:0 auto 25px;
+    border-radius:50%;
+    overflow:hidden;
+}
+
+.round img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+}
+
+
+/* =========================
+   CARD HEADING
+========================= */
+
+.card h3{
+    font-family:'Playfair Display',serif;
+    font-size:24px;
+    font-weight:500;
+    color:#333;
+    margin-bottom:15px;
+}
+
+
+/* =========================
+   CARD DESCRIPTION
+========================= */
+
+.card p{
+    max-width:300px;
+    margin:auto;
+
+    font-family:'Poppins',sans-serif;
+    font-size:13px;
+    line-height:1.8;
+    color:#777;
+}
+
+
+/* =========================
+   MOBILE OFFER
+========================= */
+
+@media(max-width:768px){
+
+    .offer{
+        padding:80px 25px;
+    }
+
+    .title{
+        margin-bottom:60px;
+    }
+
+    .title h2{
+        font-size:32px;
+    }
+
+    .title p{
+        font-size:28px;
+    }
+
+    .cards{
+        flex-direction:column;
+        gap:60px;
+    }
+
+    .card{
+        width:100%;
+    }
+
+    .round{
+        width:150px;
+        height:150px;
+    }
+
+    .card h3{
+        font-size:23px;
+    }
+
+    .card p{
+        max-width:320px;
+    }
+
+}
+/* =========================
+   THIRD SECTION
+========================= */
+
+.about{
+    width:100%;
+    min-height:100vh;
+
+    display:flex;
+    align-items:center;
+
+    background:#fff;
+    overflow:hidden;
+
+    view-timeline-name:--about-section;
+    view-timeline-axis:block;
+}
+
+
+/* =========================
+   LEFT IMAGE
+========================= */
+
+.aboutImg{
+    width:50%;
+    height:100vh;
+    overflow:hidden;
+
+    animation-name:aboutImage;
+    animation-duration:1.3s;
+    animation-timing-function:ease-out;
+    animation-fill-mode:both;
+
+    animation-timeline:--about-section;
+    animation-range:entry 0% cover 45%;
+}
+
+.aboutImg img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+}
+
+
+/* IMAGE FROM LEFT */
+
+@keyframes aboutImage{
+
+    0%{
+        opacity:0;
+        transform:translateX(-100%);
+    }
+
+    100%{
+        opacity:1;
+        transform:translateX(0);
+    }
+
+}
+
+
+/* =========================
+   RIGHT CONTAINER
+========================= */
+
+.aboutText{
+    width:50%;
+    min-height:100vh;
+
+    padding:80px;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+
+    position:relative;
+
+    background:#fff;
+
+    animation-name:aboutText;
+    animation-duration:1.3s;
+    animation-timing-function:ease-out;
+    animation-fill-mode:both;
+
+    animation-timeline:--about-section;
+    animation-range:entry 0% cover 45%;
+}
+
+
+/* RIGHT CONTAINER FROM RIGHT */
+
+@keyframes aboutText{
+
+    0%{
+        opacity:0;
+        transform:translateX(100%);
+    }
+
+    100%{
+        opacity:1;
+        transform:translateX(0);
+    }
+
+}
+
+
+/* =========================
+   W BACKGROUND
+========================= */
+
+.aboutText .line{
+    position:absolute;
+
+    top:50%;
+    left:50%;
+
+    transform:translate(-50%,-50%);
+
+    font-family:'Great Vibes',cursive;
+
+    font-size:220px;
+    font-weight:normal;
+
+    line-height:1;
+
+    color:#f1f1f1;
+
+    z-index:0;
+
+    pointer-events:none;
+}
+
+
+/* =========================
+   CONTENT ABOVE W
+========================= */
+
+.aboutText h2{
+    position:relative;
+    z-index:2;
+
+    max-width:450px;
+
+    font-family:'Playfair Display',serif;
+
+    font-size:42px;
+    font-weight:500;
+    font-style:italic;
+
+    color:#555;
+
+    margin-bottom:25px;
+}
+
+.aboutText p{
+    position:relative;
+    z-index:2;
+
+    max-width:500px;
+
+    font-family:'Poppins',sans-serif;
+
+    font-size:13px;
+    line-height:1.9;
+
+    color:#999;
+
+    margin-bottom:35px;
+}
+
+.aboutText a{
+    position:relative;
+    z-index:2;
+
+    display:inline-block;
+    width:max-content;
+
+    padding:12px 0;
+
+    background:transparent;
+
+    color:#555;
+
+    text-decoration:none;
+
+    font-family:'Poppins',sans-serif;
+
+    font-size:10px;
+    font-weight:600;
+
+    letter-spacing:.5px;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:768px){
+
+    .about{
+        flex-direction:column;
+    }
+
+    .aboutImg{
+        width:100%;
+        height:50vh;
+    }
+
+    .aboutText{
+        width:100%;
+        min-height:50vh;
+        padding:60px 30px;
+    }
+
+    .aboutText .line{
+        font-size:150px;
+    }
+
+    .aboutText h2{
+        font-size:32px;
+    }
+
+}
+/* =========================
+   CHEF SECTION
+========================= */
+
+.chef{
+    width:100%;
+    min-height:100vh;
+
+    display:flex;
+    align-items:center;
+
+    background:#fff;
+
+    overflow:hidden;
+
+    view-timeline-name:--chef-section;
+    view-timeline-axis:block;
+}
+
+
+/* =========================
+   LEFT CONTENT CONTAINER
+========================= */
+
+.chefText{
+    width:50%;
+    min-height:100vh;
+
+    padding:80px;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+
+    position:relative;
+
+    background:#fff;
+
+    animation-name:chefTextAnimation;
+    animation-duration:1.3s;
+    animation-timing-function:ease-out;
+    animation-fill-mode:both;
+
+    animation-timeline:--chef-section;
+    animation-range:entry 0% cover 45%;
+}
+
+
+/* CONTENT COMES FROM LEFT */
+
+@keyframes chefTextAnimation{
+
+    0%{
+        opacity:0;
+        transform:translateX(-100%);
+    }
+
+    100%{
+        opacity:1;
+        transform:translateX(0);
+    }
+
+}
+
+
+/* =========================
+   BACKGROUND &
+========================= */
+
+.chefText span{
+    position:absolute;
+
+    top:50%;
+    left:50%;
+
+    transform:translate(-50%,-50%);
+
+    font-family:'Great Vibes',cursive;
+
+    font-size:240px;
+    font-weight:normal;
+
+    line-height:1;
+
+    color:#f1f1f1;
+
+    z-index:0;
+
+    pointer-events:none;
+}
+
+
+/* =========================
+   CHEF HEADING
+========================= */
+
+.chefText h2{
+    position:relative;
+    z-index:2;
+
+    max-width:500px;
+
+    font-family:'Playfair Display',serif;
+
+    font-size:42px;
+    font-weight:500;
+
+    font-style:italic;
+
+    line-height:1.2;
+
+    color:#555;
+
+    margin-bottom:25px;
+}
+
+
+/* =========================
+   PARAGRAPH
+========================= */
+
+.chefText p{
+    position:relative;
+    z-index:2;
+
+    max-width:500px;
+
+    font-family:'Poppins',sans-serif;
+
+    font-size:13px;
+
+    line-height:1.9;
+
+    color:#999;
+
+    margin-bottom:35px;
+}
+
+
+/* =========================
+   READ MORE BUTTON
+========================= */
+
+.chefText button{
+    position:relative;
+    z-index:2;
+
+    width:max-content;
+
+    padding:13px 28px;
+
+    border:none;
+
+    background:#333;
+
+    color:#fff;
+
+    font-family:'Poppins',sans-serif;
+
+    font-size:10px;
+
+    font-weight:600;
+
+    letter-spacing:1px;
+
+    cursor:pointer;
+}
+
+.chefText button:hover{
+    background:#555;
+}
+
+
+/* =========================
+   RIGHT IMAGE
+========================= */
+
+.chefImg{
+    width:50%;
+    height:100vh;
+
+    overflow:hidden;
+
+    animation-name:chefImageAnimation;
+    animation-duration:1.3s;
+    animation-timing-function:ease-out;
+    animation-fill-mode:both;
+
+    animation-timeline:--chef-section;
+    animation-range:entry 0% cover 45%;
+}
+
+
+/* IMAGE COMES FROM RIGHT */
+
+@keyframes chefImageAnimation{
+
+    0%{
+        opacity:0;
+        transform:translateX(100%);
+    }
+
+    100%{
+        opacity:1;
+        transform:translateX(0);
+    }
+
+}
+
+
+.chefImg img{
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    display:block;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:768px){
+
+    .chef{
+        flex-direction:column;
+    }
+
+    .chefText{
+        width:100%;
+        min-height:50vh;
+
+        padding:60px 30px;
+    }
+
+    .chefText span{
+        font-size:160px;
+    }
+
+    .chefText h2{
+        font-size:32px;
+    }
+
+    .chefText p{
+        font-size:13px;
+    }
+
+    .chefImg{
+        width:100%;
+        height:50vh;
+    }
+
+}
+/* =========================
+   TEAM SECTION
+========================= */
+
+.team{
+    width:100%;
+    min-height:100vh;
+
+    padding:90px 8% 80px;
+
+    background:#fff;
+}
+
+
+/* =========================
+   TITLE
+========================= */
+
+.team .title{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.team .title h2{
+    font-family:'Playfair Display',serif;
+    font-size:28px;
+    font-weight:500;
+
+    color:#333;
+
+    margin-bottom:5px;
+}
+
+.team .title p{
+    font-family:'Great Vibes',cursive;
+    font-size:16px;
+
+    color:#ddd;
+
+    position:relative;
+}
+
+
+/* small lines beside "is the best" */
+
+.team .title p::before,
+.team .title p::after{
+    content:"";
+
+    display:inline-block;
+
+    width:85px;
+    height:1px;
+
+    background:#e5e5e5;
+
+    vertical-align:middle;
+
+    margin:0 15px;
+}
+
+
+/* =========================
+   TEAM CARDS
+========================= */
+
+.teamCards{
+    width:100%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:flex-start;
+
+    gap:40px;
+}
+
+
+/* =========================
+   PERSON
+========================= */
+
+.person{
+    width:180px;
+
+    text-align:center;
+}
+
+
+/* =========================
+   PERSON IMAGE
+========================= */
+
+.person img{
+    width:165px;
+    height:258px;
+
+    object-fit:cover;
+
+    display:block;
+
+    margin:0 auto 18px;
+
+    border-radius:5px;
+}
+
+
+/* =========================
+   PERSON NAME
+========================= */
+
+.person h3{
+    font-family:'Playfair Display',serif;
+
+    font-size:11px;
+    font-weight:400;
+
+    color:#555;
+
+    margin-bottom:8px;
+}
+
+
+/* =========================
+   POSITION
+========================= */
+
+.person span{
+    display:block;
+
+    font-family:'Poppins',sans-serif;
+
+    font-size:16px;
+    font-weight:400;
+
+    color:#bbb;
+
+    margin-bottom:12px;
+}
+
+
+/* =========================
+   DESCRIPTION
+========================= */
+
+.person p{
+    font-family:'Poppins',sans-serif;
+
+    font-size:10px;
+
+    line-height:1.8;
+
+    color:#aaa;
+
+    margin:0 auto;
+
+    max-width:170px;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:768px){
+
+    .team{
+        padding:70px 25px;
+    }
+
+    .team .title h2{
+        font-size:26px;
+    }
+
+    .team .title p::before,
+    .team .title p::after{
+        width:40px;
+        margin:0 8px;
+    }
+
+    .teamCards{
+        flex-direction:column;
+
+        align-items:center;
+
+        gap:50px;
+    }
+
+    .person{
+        width:100%;
+        max-width:250px;
+    }
+
+    .person img{
+        width:165px;
+        height:258px;
+    }
+
+}
+/* ============================= */
+/* FOODIE MENU SECTION */
+/* ============================= */
+
+.foodieMenuSection {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: visible;
+
+    view-timeline-name: --foodieMenuTimeline;
+    view-timeline-axis: block;
+}
+
+
+/* ============================= */
+/* TOP BACKGROUND */
+/* ============================= */
+
+.foodieMenuTopBg {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 50%;
+
+    z-index: 1;
+}
+
+.foodieMenuTopBg img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    display: block;
+}
+
+
+/* ============================= */
+/* BOTTOM BACKGROUND */
+/* ============================= */
+
+.foodieMenuBottomBg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    height: 50%;
+
+    z-index: 1;
+}
+
+.foodieMenuBottomBg img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    display: block;
+}
+
+
+/* ============================= */
+/* WHITE MENU CONTAINER */
+/* ============================= */
+
+.foodieMenuContent {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    width: 75%;
+    padding: 60px;
+
+    background: #ffffff;
+
+    text-align: center;
+
+    z-index: 5;
+
+    opacity: 1;
+
+    transform: translate(-50%, 300px);
+
+    animation-name: foodieMenuSlideUp;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: both;
+
+    animation-timeline: --foodieMenuTimeline;
+    animation-range: entry 0% cover 50%;
+}
+
+
+/* ============================= */
+/* CONTAINER ANIMATION */
+/* ============================= */
+
+@keyframes foodieMenuSlideUp {
+
+    from {
+        transform: translate(-50%, 300px);
+    }
+
+    to {
+        transform: translate(-50%, -50%);
+    }
+
+}
+
+
+/* ============================= */
+/* TITLE */
+/* ============================= */
+
+.foodieMenuTitle h2 {
+    font-size: 40px;
+    margin: 0;
+}
+
+.foodieMenuTitle p {
+    font-size: 18px;
+    color: #777;
+    margin-top: 10px;
+}
+
+
+/* ============================= */
+/* FOOD COLUMNS */
+/* ============================= */
+
+.foodieMenuFood {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 60px;
+
+    margin-top: 45px;
+
+    text-align: left;
+}
+
+
+/* ============================= */
+/* FOOD PART */
+/* ============================= */
+
+.foodieMenuPart h2 {
+    font-size: 28px;
+    margin-bottom: 25px;
+}
+
+
+/* ============================= */
+/* FOOD ITEM */
+/* ============================= */
+
+.foodieMenuItem {
+    margin-bottom: 25px;
+}
+
+
+/* ============================= */
+/* ITEM TOP */
+/* ============================= */
+
+.foodieMenuItemTop {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+}
+
+.foodieMenuItemTop h3 {
+    font-size: 15px;
+    margin: 0;
+}
+
+.foodieMenuItemTop span {
+    font-size: 14px;
+}
+
+
+/* ============================= */
+/* ITEM DESCRIPTION */
+/* ============================= */
+
+.foodieMenuItem p {
+    font-size: 13px;
+
+    color: #888;
+
+    line-height: 1.6;
+
+    font-style: italic;
+
+    margin-top: 7px;
+}
+
+
+/* ============================= */
+/* BUTTON */
+/* ============================= */
+
+.foodieMenuButton {
+    display: inline-block;
+
+    margin-top: 15px;
+
+    padding: 13px 25px;
+
+    background: #000000;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    transition: 0.3s;
+}
+
+.foodieMenuButton:hover {
+    background: #e5a83b;
+}
+/* ============================= */
+/* REVIEW SECTION */
+/* ============================= */
+
+.review {
+    width: 100%;
+    min-height: 600px;
+
+    background: #ffffff;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+}
+
+
+/* ============================= */
+/* REVIEW BOX */
+/* ============================= */
+
+.reviewBox {
+    width: 100%;
+    max-width: 900px;
+
+    padding: 70px 40px;
+}
+
+
+/* ============================= */
+/* TITLE */
+/* ============================= */
+
+.reviewTitle h2 {
+    margin: 0;
+
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    font-weight: 500;
+
+    color: #222;
+}
+
+
+/* ============================= */
+/* SUB TITLE */
+/* ============================= */
+
+.subTitle {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 15px;
+
+    margin-top: 10px;
+}
+
+.subTitle span {
+    width: 40px;
+    height: 1px;
+
+    background: #999;
+}
+
+.subTitle p {
+    margin: 0;
+
+    font-family: 'Great Vibes', cursive;
+    font-size: 24px;
+
+    color: #999;
+}
+
+
+/* ============================= */
+/* REVIEW CONTENT */
+/* ============================= */
+
+.reviewContent {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin-top: 45px;
+}
+
+
+/* ============================= */
+/* CUSTOMER IMAGE */
+/* ============================= */
+
+.customerImg {
+    width: 100px;
+    height: 100px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    display: block;
+}
+
+
+/* ============================= */
+/* REVIEW TEXT */
+/* ============================= */
+
+.reviewText {
+    max-width: 650px;
+
+    margin: 25px auto 0;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 14px;
+
+    line-height: 1.8;
+
+    color: #777;
+}
+
+
+/* ============================= */
+/* CUSTOMER NAME */
+/* ============================= */
+
+.reviewContent h4 {
+    margin: 25px 0 5px;
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: 18px;
+
+    font-weight: 600;
+
+    color: #222;
+}
+
+
+/* ============================= */
+/* ROLE */
+/* ============================= */
+
+.role {
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 12px;
+
+    color: #999;
+}
+
+
+/* ============================= */
+/* NUMBER */
+/* ============================= */
+
+.number {
+    margin-top: 30px;
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: 14px;
+
+    color: #999;
+}
+/* ============================= */
+/* BOOKING SECTION */
+/* ============================= */
+
+.book {
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+
+    background-image: url("https://jevelin.shufflehound.com/foodie/wp-content/uploads/sites/17/2018/01/brooke-lark-385504.jpg");
+    background-size: cover;
+    background-position: center;
+
+    overflow: hidden;
+
+    view-timeline-name: --bookingTimeline;
+    view-timeline-axis: block;
+}
+
+
+/* DARK OVERLAY */
+
+.book::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.45);
+}
+
+
+/* ============================= */
+/* BOOKING BOX */
+/* ============================= */
+
+.bookBox {
+    position: relative;
+    z-index: 2;
+
+    width: 75%;
+    max-width: 900px;
+
+    padding: 60px;
+
+    background: white;
+
+    text-align: center;
+
+    transform: translateY(300px);
+
+    animation-name: bookingBoxUp;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: both;
+
+    animation-timeline: --bookingTimeline;
+    animation-range: entry 0% cover 45%;
+}
+
+
+/* ============================= */
+/* ANIMATION */
+/* ============================= */
+
+@keyframes bookingBoxUp {
+
+    from {
+        transform: translateY(300px);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+
+}
+
+
+/* ============================= */
+/* TITLE */
+/* ============================= */
+
+.bookBox .title h2 {
+    margin: 0;
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: 40px;
+    font-weight: 500;
+
+    color: #222;
+}
+
+.bookBox .title p {
+    margin-top: 10px;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 14px;
+
+    color: #888;
+}
+
+
+/* ============================= */
+/* FORM */
+/* ============================= */
+
+.bookBox form {
+    margin-top: 40px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 15px;
+}
+
+
+/* TWO INPUTS */
+
+.bookBox .two {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 15px;
+}
+
+
+/* INPUTS AND SELECTS */
+
+.bookBox input,
+.bookBox select {
+    width: 100%;
+
+    height: 50px;
+
+    padding: 0 15px;
+
+    border: 1px solid #ddd;
+
+    background: #fff;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 13px;
+
+    color: #777;
+
+    outline: none;
+}
+
+
+/* FOCUS */
+
+.bookBox input:focus,
+.bookBox select:focus {
+    border-color: #999;
+}
+
+
+/* ============================= */
+/* BUTTON */
+/* ============================= */
+
+.bookBox button {
+    width: 180px;
+
+    height: 50px;
+
+    margin: 15px auto 0;
+
+    border: none;
+
+    background: #111;
+
+    color: white;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 12px;
+
+    cursor: pointer;
+}
+
+.bookBox button:hover {
+    background: #e5a83b;
+}
+
+
+/* ============================= */
+/* MOBILE */
+/* ============================= */
+
+@media (max-width: 768px) {
+
+    .book {
+        min-height: 100vh;
+
+        padding: 60px 20px;
+    }
+
+    .bookBox {
+        width: 100%;
+
+        padding: 40px 25px;
+    }
+
+    .bookBox .title h2 {
+        font-size: 30px;
+    }
+
+    .bookBox .two {
+        grid-template-columns: 1fr;
+    }
+
+}
+/* ============================= */
+/* CONTACT SECTION */
+/* ============================= */
+
+.contact {
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+
+    overflow: hidden;
+
+    background: #ffffff;
+
+    view-timeline-name: --contactSectionTimeline;
+    view-timeline-axis: block;
+}
+
+
+/* ============================= */
+/* LEFT CONTACT CONTAINER */
+/* ============================= */
+
+.contactText {
+    width: 50%;
+    min-height: 100vh;
+
+    padding: 80px;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+
+    background: #ffffff;
+
+    transform: translateX(-100%);
+
+    animation-name: contactTextFromLeft;
+    animation-duration: 1.2s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: both;
+
+    animation-timeline: --contactSectionTimeline;
+    animation-range: entry 0% cover 45%;
+}
+
+
+/* LEFT → CENTER */
+
+@keyframes contactTextFromLeft {
+
+    from {
+        transform: translateX(-100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+
+}
+
+
+/* ============================= */
+/* CONTACT TITLE */
+/* ============================= */
+
+.contactText > p {
+    margin-bottom: 15px;
+
+    font-size: 12px;
+
+    letter-spacing: 4px;
+
+    color: #999;
+}
+
+.contactText h2 {
+    max-width: 400px;
+
+    margin: 0;
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: 42px;
+
+    font-weight: 400;
+
+    font-style: italic;
+
+    line-height: 1.2;
+
+    color: #333;
+}
+
+
+/* ============================= */
+/* OPENING TIMES */
+/* ============================= */
+
+.time {
+    margin-top: 60px;
+
+    max-width: 450px;
+}
+
+.time h4 {
+    display: inline-block;
+
+    width: 55%;
+
+    margin: 0;
+
+    padding: 18px 0;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 14px;
+
+    color: #333;
+
+    border-bottom: 1px solid #ddd;
+}
+
+.time span {
+    display: inline-block;
+
+    width: 40%;
+
+    padding: 18px 0;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 13px;
+
+    color: #888;
+
+    border-bottom: 1px solid #ddd;
+
+    text-align: right;
+}
+
+
+/* ============================= */
+/* CONTACT INFORMATION */
+/* ============================= */
+
+.info {
+    margin-top: 45px;
+}
+
+.info h4 {
+    margin: 15px 0 3px;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 13px;
+
+    color: #333;
+}
+
+.info p {
+    margin: 0;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 13px;
+
+    color: #888;
+}
+
+
+/* ============================= */
+/* RIGHT MAP CONTAINER */
+/* ============================= */
+
+.contactImg {
+    width: 50%;
+    min-height: 100vh;
+
+    position: relative;
+
+    overflow: hidden;
+
+    transform: translateX(100%);
+
+    animation-name: contactMapFromRight;
+    animation-duration: 1.2s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: both;
+
+    animation-timeline: --contactSectionTimeline;
+    animation-range: entry 0% cover 45%;
+}
+
+
+/* RIGHT → CENTER */
+
+@keyframes contactMapFromRight {
+
+    from {
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+
+}
+
+
+/* ============================= */
+/* GOOGLE MAP */
+/* ============================= */
+
+.contactImg iframe {
+    width: 100%;
+    height: 100%;
+
+    min-height: 100vh;
+
+    border: 0;
+
+    display: block;
+}
+
+
+/* ============================= */
+/* MOBILE */
+/* ============================= */
+
+@media (max-width: 768px) {
+
+    .contact {
+        flex-direction: column;
+    }
+
+    .contactText {
+        width: 100%;
+        min-height: auto;
+
+        padding: 60px 30px;
+    }
+
+    .contactImg {
+        width: 100%;
+        min-height: 500px;
+    }
+
+    .contactImg iframe {
+        min-height: 500px;
+    }
+
+    .contactText h2 {
+        font-size: 34px;
+    }
+
+}
+.footer {
+    width: 100%;
+    height: 125px;
+    background: #333;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 17%;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.flogo img {
+    width: 100px;
+    filter: brightness(0) invert(1);
+}
+
+.ftext p {
+    color: white;
+    font-size: 12px;
+    margin: 0;
+}
+
+.ftext b {
+    font-weight: bold;
+}
+
+.social {
+    display: flex;
+    gap: 30px;
+}
+
+.social a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.social a:hover {
+    color: #ddd;
+}
+
+.top {
+    position: absolute;
+    right: 25px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+
+    background: white;
+    color: #aaa;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.top:hover {
+    color: #333;
+}
+/* =========================================================
+   RESPONSIVE DESIGN
+   LAPTOP + TABLET + MOBILE
+========================================================= */
+
+
+/* =========================================================
+   LAPTOP
+   1025px - 1440px
+========================================================= */
+
+@media (min-width: 1025px) and (max-width: 1440px) {
+
+    /* =========================
+       NAVBAR
+    ========================= */
+
+    .head {
+        padding: 0 5%;
+    }
+
+    .nav {
+        gap: 20px;
+    }
+
+    .nav a {
+        font-size: 12px;
+    }
+
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .heroText h1 {
+        font-size: 55px;
+    }
+
+    .restaurant,
+    .dishes {
+        font-size: 68px;
+    }
+
+
+    /* =========================
+       OFFER
+    ========================= */
+
+    .offer {
+        padding: 90px 6%;
+    }
+
+    .cards {
+        gap: 35px;
+    }
+
+    .round {
+        width: 155px;
+        height: 155px;
+    }
+
+
+    /* =========================
+       ABOUT
+    ========================= */
+
+    .aboutText {
+        padding: 60px;
+    }
+
+    .aboutText h2 {
+        font-size: 38px;
+    }
+
+
+    /* =========================
+       CHEF
+    ========================= */
+
+    .chefText {
+        padding: 60px;
+    }
+
+    .chefText h2 {
+        font-size: 38px;
+    }
+
+
+    /* =========================
+       TEAM
+    ========================= */
+
+    .team {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .teamCards {
+        gap: 25px;
+    }
+
+
+    /* =========================
+       FOOD MENU
+    ========================= */
+
+    .foodieMenuContent {
+        width: 80%;
+        padding: 50px;
+    }
+
+    .foodieMenuFood {
+        gap: 40px;
+    }
+
+
+    /* =========================
+       REVIEW
+    ========================= */
+
+    .reviewBox {
+        max-width: 850px;
+    }
+
+
+    /* =========================
+       BOOKING
+    ========================= */
+
+    .bookBox {
+        width: 80%;
+        padding: 50px;
+    }
+
+
+    /* =========================
+       CONTACT
+    ========================= */
+
+    .contactText {
+        padding: 60px;
+    }
+
+    .contactText h2 {
+        font-size: 38px;
+    }
+
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    .footer {
+        padding: 0 10%;
+    }
+
+}
+
+
+
+/* =========================================================
+   TABLET
+   769px - 1024px
+========================================================= */
+
+@media (min-width: 769px) and (max-width: 1024px) {
+
+    /* =========================
+       NAVBAR
+    ========================= */
+
+    .head {
+        height: 75px;
+        padding: 0 35px;
+    }
+
+    .logo span {
+        font-size: 34px;
+    }
+
+    .nav {
+        gap: 14px;
+    }
+
+    .nav a {
+        font-size: 11px;
+    }
+
+    .nav .icon {
+        font-size: 13px;
+    }
+
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .heroText h1 {
+        font-size: 48px;
+    }
+
+    .heroText h3 {
+        font-size: 9px;
+        letter-spacing: 5px;
+    }
+
+    .restaurant,
+    .dishes {
+        font-size: 58px;
+    }
+
+
+    /* =========================
+       OFFER
+    ========================= */
+
+    .offer {
+        padding: 80px 40px;
+    }
+
+    .title {
+        margin-bottom: 55px;
+    }
+
+    .title h2 {
+        font-size: 36px;
+    }
+
+    .title p {
+        font-size: 27px;
+    }
+
+    .cards {
+        gap: 25px;
+    }
+
+    .round {
+        width: 135px;
+        height: 135px;
+    }
+
+    .card h3 {
+        font-size: 21px;
+    }
+
+    .card p {
+        font-size: 12px;
+    }
+
+
+    /* =========================
+       ABOUT
+    ========================= */
+
+    .aboutImg {
+        width: 50%;
+    }
+
+    .aboutText {
+        width: 50%;
+        padding: 45px;
+    }
+
+    .aboutText h2 {
+        font-size: 34px;
+    }
+
+    .aboutText p {
+        font-size: 12px;
+    }
+
+    .aboutText .line {
+        font-size: 170px;
+    }
+
+
+    /* =========================
+       CHEF
+    ========================= */
+
+    .chefText {
+        padding: 45px;
+    }
+
+    .chefText h2 {
+        font-size: 34px;
+    }
+
+    .chefText p {
+        font-size: 12px;
+    }
+
+    .chefText span {
+        font-size: 180px;
+    }
+
+
+    /* =========================
+       TEAM
+    ========================= */
+
+    .team {
+        padding: 75px 40px;
+    }
+
+    .teamCards {
+        display: grid;
+
+        grid-template-columns: 1fr 1fr;
+
+        gap: 50px 30px;
+
+        justify-items: center;
+    }
+
+    .person {
+        width: 220px;
+    }
+
+
+    /* =========================
+       FOOD MENU
+    ========================= */
+
+    .foodieMenuSection {
+        min-height: 100vh;
+    }
+
+    .foodieMenuContent {
+        width: 90%;
+
+        padding: 45px 35px;
+    }
+
+    .foodieMenuTitle h2 {
+        font-size: 34px;
+    }
+
+    .foodieMenuTitle p {
+        font-size: 16px;
+    }
+
+    .foodieMenuFood {
+        gap: 30px;
+    }
+
+    .foodieMenuPart h2 {
+        font-size: 24px;
+    }
+
+    .foodieMenuItemTop h3 {
+        font-size: 13px;
+    }
+
+    .foodieMenuItem p {
+        font-size: 11px;
+    }
+
+
+    /* =========================
+       REVIEW
+    ========================= */
+
+    .review {
+        min-height: 550px;
+    }
+
+    .reviewBox {
+        padding: 60px 35px;
+    }
+
+    .reviewTitle h2 {
+        font-size: 38px;
+    }
+
+    .reviewText {
+        max-width: 600px;
+        font-size: 13px;
+    }
+
+
+    /* =========================
+       BOOKING
+    ========================= */
+
+    .book {
+        padding: 60px 30px;
+    }
+
+    .bookBox {
+        width: 90%;
+        padding: 45px 35px;
+    }
+
+    .bookBox .title h2 {
+        font-size: 34px;
+    }
+
+
+    /* =========================
+       CONTACT
+    ========================= */
+
+    .contactText {
+        padding: 45px;
+    }
+
+    .contactText h2 {
+        font-size: 34px;
+    }
+
+    .time {
+        margin-top: 40px;
+    }
+
+    .time h4 {
+        font-size: 12px;
+    }
+
+    .time span {
+        font-size: 11px;
+    }
+
+    .info {
+        margin-top: 30px;
+    }
+
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    .footer {
+        padding: 0 7%;
+    }
+
+}
+
+
+
+/* =========================================================
+   MOBILE
+   481px - 768px
+========================================================= */
+
+@media (min-width: 481px) and (max-width: 768px) {
+
+    /* =========================
+       NAVBAR
+    ========================= */
+
+    .head {
+        height: 70px;
+        padding: 0 25px;
+    }
+
+    .logo span {
+        font-size: 33px;
+    }
+
+    .nav {
+        display: none;
+    }
+
+    .menuBtn {
+        display: block;
+    }
+
+    .mobileMenu {
+        top: 70px;
+    }
+
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .heroText h1 {
+        font-size: 48px;
+    }
+
+    .heroText h3 {
+        font-size: 9px;
+        letter-spacing: 5px;
+    }
+
+    .restaurant,
+    .dishes {
+        font-size: 50px;
+    }
+
+
+    /* =========================
+       OFFER
+    ========================= */
+
+    .offer {
+        padding: 80px 30px;
+    }
+
+    .title h2 {
+        font-size: 32px;
+    }
+
+    .cards {
+        flex-direction: column;
+        gap: 55px;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+
+    /* =========================
+       ABOUT
+    ========================= */
+
+    .about {
+        flex-direction: column;
+    }
+
+    .aboutImg {
+        width: 100%;
+        height: 50vh;
+    }
+
+    .aboutText {
+        width: 100%;
+        min-height: 50vh;
+        padding: 60px 40px;
+    }
+
+
+    /* =========================
+       CHEF
+    ========================= */
+
+    .chef {
+        flex-direction: column;
+    }
+
+    .chefText {
+        width: 100%;
+        min-height: 50vh;
+        padding: 60px 40px;
+    }
+
+    .chefImg {
+        width: 100%;
+        height: 50vh;
+    }
+
+
+    /* =========================
+       TEAM
+    ========================= */
+
+    .team {
+        padding: 70px 30px;
+    }
+
+    .teamCards {
+        display: grid;
+
+        grid-template-columns: 1fr 1fr;
+
+        gap: 50px 25px;
+
+        justify-items: center;
+    }
+
+    .person {
+        width: 200px;
+    }
+
+
+    /* =========================
+       FOOD MENU
+    ========================= */
+
+    .foodieMenuSection {
+        min-height: 100vh;
+        height: auto;
+    }
+
+    .foodieMenuTopBg,
+    .foodieMenuBottomBg {
+        height: 50%;
+    }
+
+    .foodieMenuContent {
+        width: 88%;
+        padding: 40px 30px;
+    }
+
+    .foodieMenuTitle h2 {
+        font-size: 30px;
+    }
+
+    .foodieMenuFood {
+        gap: 25px;
+    }
+
+    .foodieMenuPart h2 {
+        font-size: 22px;
+    }
+
+    .foodieMenuItemTop h3 {
+        font-size: 12px;
+    }
+
+    .foodieMenuItem p {
+        font-size: 10px;
+    }
+
+
+    /* =========================
+       REVIEW
+    ========================= */
+
+    .review {
+        min-height: 550px;
+    }
+
+    .reviewBox {
+        padding: 60px 30px;
+    }
+
+    .reviewTitle h2 {
+        font-size: 36px;
+    }
+
+    .reviewText {
+        font-size: 13px;
+    }
+
+
+    /* =========================
+       BOOKING
+    ========================= */
+
+    .book {
+        padding: 60px 25px;
+    }
+
+    .bookBox {
+        width: 90%;
+        padding: 45px 30px;
+    }
+
+    .bookBox .title h2 {
+        font-size: 32px;
+    }
+
+
+    /* =========================
+       CONTACT
+    ========================= */
+
+    .contact {
+        flex-direction: column;
+    }
+
+    .contactText {
+        width: 100%;
+        min-height: 600px;
+        padding: 60px 40px;
+    }
+
+    .contactImg {
+        width: 100%;
+        min-height: 500px;
+    }
+
+    .contactImg iframe {
+        min-height: 500px;
+    }
+
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    .footer {
+        height: auto;
+        min-height: 180px;
+
+        padding: 35px 30px;
+
+        flex-direction: column;
+
+        gap: 20px;
+
+        justify-content: center;
+    }
+
+    .top {
+        right: 20px;
+    }
+
+}
+
+
+
+/* =========================================================
+   SMALL MOBILE
+   480px AND BELOW
+========================================================= */
+
+@media (max-width: 480px) {
+
+    /* =========================
+       NAVBAR
+    ========================= */
+
+    .head {
+        height: 65px;
+        padding: 0 20px;
+    }
+
+    .logo span {
+        font-size: 30px;
+    }
+
+    .nav {
+        display: none;
+    }
+
+    .menuBtn {
+        display: block;
+        width: 28px;
+    }
+
+    .menuBtn span {
+        width: 25px;
+    }
+
+    .mobileMenu {
+        top: 65px;
+        padding: 22px 25px;
+    }
+
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .heroText {
+        padding: 0 15px;
+    }
+
+    .heroText h1 {
+        font-size: 40px;
+    }
+
+    .heroText h3 {
+        font-size: 8px;
+        letter-spacing: 4px;
+    }
+
+    .restaurant,
+    .dishes {
+        font-size: 39px;
+    }
+
+    .scrollDown {
+        bottom: 25px;
+    }
+
+
+    /* =========================
+       OFFER
+    ========================= */
+
+    .offer {
+        padding: 70px 20px;
+    }
+
+    .title {
+        margin-bottom: 50px;
+    }
+
+    .title h2 {
+        font-size: 28px;
+    }
+
+    .title p {
+        font-size: 25px;
+    }
+
+    .cards {
+        flex-direction: column;
+        gap: 55px;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    .round {
+        width: 140px;
+        height: 140px;
+    }
+
+    .card h3 {
+        font-size: 21px;
+    }
+
+    .card p {
+        font-size: 12px;
+        max-width: 290px;
+    }
+
+
+    /* =========================
+       ABOUT
+    ========================= */
+
+    .about {
+        flex-direction: column;
+    }
+
+    .aboutImg {
+        width: 100%;
+        height: 45vh;
+    }
+
+    .aboutText {
+        width: 100%;
+        min-height: 55vh;
+        padding: 50px 25px;
+    }
+
+    .aboutText .line {
+        font-size: 130px;
+    }
+
+    .aboutText h2 {
+        font-size: 30px;
+    }
+
+    .aboutText p {
+        font-size: 12px;
+    }
+
+
+    /* =========================
+       CHEF
+    ========================= */
+
+    .chef {
+        flex-direction: column;
+    }
+
+    .chefText {
+        width: 100%;
+        min-height: 55vh;
+        padding: 50px 25px;
+    }
+
+    .chefText span {
+        font-size: 140px;
+    }
+
+    .chefText h2 {
+        font-size: 30px;
+    }
+
+    .chefText p {
+        font-size: 12px;
+    }
+
+    .chefImg {
+        width: 100%;
+        height: 45vh;
+    }
+
+
+    /* =========================
+       TEAM
+    ========================= */
+
+    .team {
+        padding: 65px 20px;
+    }
+
+    .team .title h2 {
+        font-size: 25px;
+    }
+
+    .team .title p {
+        font-size: 15px;
+    }
+
+    .team .title p::before,
+    .team .title p::after {
+        width: 30px;
+        margin: 0 6px;
+    }
+
+    .teamCards {
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 45px;
+    }
+
+    .person {
+        width: 100%;
+        max-width: 250px;
+    }
+
+
+    /* =========================
+       FOOD MENU
+    ========================= */
+
+    .foodieMenuSection {
+        height: auto;
+        min-height: 100vh;
+
+        padding: 0;
+    }
+
+    .foodieMenuTopBg {
+        height: 45%;
+    }
+
+    .foodieMenuBottomBg {
+        height: 55%;
+    }
+
+    .foodieMenuContent {
+        width: 90%;
+
+        padding: 35px 20px;
+
+        top: 50%;
+    }
+
+    .foodieMenuTitle h2 {
+        font-size: 26px;
+    }
+
+    .foodieMenuTitle p {
+        font-size: 15px;
+    }
+
+    .foodieMenuFood {
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+
+        margin-top: 30px;
+    }
+
+    .foodieMenuPart h2 {
+        font-size: 21px;
+        margin-bottom: 18px;
+    }
+
+    .foodieMenuItem {
+        margin-bottom: 20px;
+    }
+
+    .foodieMenuItemTop h3 {
+        font-size: 12px;
+    }
+
+    .foodieMenuItemTop span {
+        font-size: 12px;
+    }
+
+    .foodieMenuItem p {
+        font-size: 10px;
+    }
+
+    .foodieMenuButton {
+        font-size: 10px;
+        padding: 12px 20px;
+    }
+
+
+    /* =========================
+       REVIEW
+    ========================= */
+
+    .review {
+        min-height: 520px;
+    }
+
+    .reviewBox {
+        padding: 50px 20px;
+    }
+
+    .reviewTitle h2 {
+        font-size: 32px;
+    }
+
+    .subTitle {
+        gap: 8px;
+    }
+
+    .subTitle span {
+        width: 25px;
+    }
+
+    .subTitle p {
+        font-size: 20px;
+    }
+
+    .reviewContent {
+        margin-top: 35px;
+    }
+
+    .customerImg {
+        width: 85px;
+        height: 85px;
+    }
+
+    .reviewText {
+        font-size: 12px;
+        line-height: 1.7;
+    }
+
+
+    /* =========================
+       BOOKING
+    ========================= */
+
+    .book {
+        min-height: 100vh;
+
+        padding: 50px 15px;
+    }
+
+    .bookBox {
+        width: 100%;
+
+        padding: 35px 20px;
+    }
+
+    .bookBox .title h2 {
+        font-size: 27px;
+        line-height: 1.3;
+    }
+
+    .bookBox .title p {
+        font-size: 12px;
+    }
+
+    .bookBox form {
+        margin-top: 30px;
+    }
+
+    .bookBox .two {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .bookBox input,
+    .bookBox select {
+        height: 48px;
+        font-size: 12px;
+    }
+
+    .bookBox button {
+        width: 160px;
+    }
+
+
+    /* =========================
+       CONTACT
+    ========================= */
+
+    .contact {
+        flex-direction: column;
+    }
+
+    .contactText {
+        width: 100%;
+
+        min-height: 600px;
+
+        padding: 55px 25px;
+    }
+
+    .contactText > p {
+        font-size: 10px;
+        letter-spacing: 3px;
+    }
+
+    .contactText h2 {
+        font-size: 30px;
+    }
+
+    .time {
+        margin-top: 40px;
+        width: 100%;
+    }
+
+    .time h4 {
+        width: 55%;
+        font-size: 11px;
+    }
+
+    .time span {
+        width: 40%;
+        font-size: 10px;
+    }
+
+    .info {
+        margin-top: 30px;
+    }
+
+    .info h4 {
+        font-size: 12px;
+    }
+
+    .info p {
+        font-size: 11px;
+    }
+
+    .contactImg {
+        width: 100%;
+
+        min-height: 450px;
+    }
+
+    .contactImg iframe {
+        min-height: 450px;
+    }
+
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    .footer {
+        width: 100%;
+
+        height: auto;
+        min-height: 220px;
+
+        padding: 40px 20px;
+
+        display: flex;
+
+        flex-direction: column;
+
+        justify-content: center;
+
+        gap: 20px;
+    }
+
+    .flogo img {
+        width: 90px;
+    }
+
+    .ftext {
+        text-align: center;
+    }
+
+    .ftext p {
+        font-size: 11px;
+    }
+
+    .social {
+        gap: 25px;
+    }
+
+    .top {
+        right: 15px;
+        top: 15px;
+
+        width: 35px;
+        height: 35px;
+    }
+
+}
